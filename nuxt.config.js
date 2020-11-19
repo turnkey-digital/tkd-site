@@ -19,11 +19,11 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#2EB8FF' },
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/global.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -41,4 +41,9 @@ export default {
      */
     extend(config, ctx) {},
   },
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv'
+  ],
+
 };
