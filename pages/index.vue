@@ -54,8 +54,12 @@ export default {
                 this.hero.tagline = result.hero.tagline;
                 // this.footer.img = "test";
                 
-                this.footer.img = process.env.cockpit + result.footImg;
-                
+                this.footer.img = process.env.cockpit + result.footerImg.path;
+                this.footer.header = result.footerHeader;
+                this.footer.tagLine = result.footerTagline;
+                this.footer.btnTxt = result.footerBtnTxt;
+                this.footer.btnLink =result.footerBtnLink;
+
                 console.log(result);
             });
     },
@@ -70,11 +74,8 @@ export default {
                 img: "",
                 header: "",
                 tagLine: "",
-                btn: {
-                    text: "",
-                    link: ""
-                },
-
+                btnTxt:"",
+                btnLink:""
             }
         };
     },
