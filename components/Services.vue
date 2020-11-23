@@ -1,6 +1,6 @@
 <template>
 <div class="z-50 w-full flex justify-center bottom-0">
-    <div class="container py-24 text-2xl leading-10 masonary">
+    <div class="container px-8 py-24 text-2xl leading-10 masonary">
         <div v-if="loadingCats">
             <h6>Loading..</h6>
         </div>

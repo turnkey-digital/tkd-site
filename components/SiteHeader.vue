@@ -1,6 +1,6 @@
 <template>
 <div class="absolute z-50 w-full flex justify-center">
-    <div class="container flex justify-center py-8 z-50 ">
+    <div class="container px-8 flex justify-center py-8 z-50 ">
         <div v-if="loading" class="w-full text-center">
             <span class="font-mono font-bold text-white text-opacity-50">Header is loading....</span>
         </div>

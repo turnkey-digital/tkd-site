@@ -35,7 +35,9 @@ module.exports = {
 </script>
 
 <style scoped>
-    .projects_parent div:nth-of-type(10) {
-        display:none;
+    @media(max-width:1280px) {
+        .projects_parent div:nth-of-type(10) {
+            display:none;
+        }
     }
 </style>

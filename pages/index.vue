@@ -42,14 +42,17 @@ export default {
             })
             .then((response) => response.json())
             .then((result) => {
-                this.hero.bg = process.env.cockpit + result.hero.bg.path;
+                this.hero.bg = result.hero.bg;
                 this.hero.tagline = result.hero.tagline;
+
+                console.log(result)
                 
                 this.footer.img = process.env.cockpit + result.footerImg.path;
                 this.footer.header = result.footerHeader;
                 this.footer.tagLine = result.footerTagline;
                 this.footer.btnTxt = result.footerBtnTxt;
-                this.footer.btnLink =result.footerBtnLink;
+                this.footer.btnLink = result.footerBtnLink;
+                this.footer.copyRight = result.copyRight;
 
             });
     },
@@ -65,7 +68,8 @@ export default {
                 header: "",
                 tagLine: "",
                 btnTxt:"",
-                btnLink:""
+                btnLink:"",
+                copyRight:""
             }
         };
     },
