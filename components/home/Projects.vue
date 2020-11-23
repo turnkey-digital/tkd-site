@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-3 xl:grid-cols-5">
+    <div class="projects_parent grid grid-cols-3 xl:grid-cols-5">
         <div v-if="loading">
             <h6>Loading...</h6>
         </div>
@@ -33,3 +33,9 @@ module.exports = {
 }
 
 </script>
+
+<style scoped>
+    .projects_parent div:nth-of-type(10) {
+        display:none;
+    }
+</style>
