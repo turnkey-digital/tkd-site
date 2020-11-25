@@ -1,6 +1,6 @@
 <template>
 <div class="bg-black text-white font-helN overflow-hidden">
-    <site-header />
+    <site-header class="absolute" />
 
     <home-hero v-bind="hero" />
 

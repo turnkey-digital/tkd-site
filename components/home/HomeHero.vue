@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen w-full z-0 overflow-hidden relative">
-        <video v-bind:src="bg" class="absolute left-1_2 min-w-full h-full max-w-none z-0 transform -translate-x-1/2" autoplay loop />
+        <video v-bind:src="bg" class="absolute left-1_2 min-w-full min-h-full max-w-none z-0 transform -translate-x-1/2" autoplay loop />
         
         <gradient />
 
