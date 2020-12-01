@@ -1,5 +1,7 @@
 :root {
     --color-pri:#2EB8FF;
+
+    --trans-fast: 175ms;
 }
 
 

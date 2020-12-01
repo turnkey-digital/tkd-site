@@ -1,6 +1,6 @@
 <template>
 <div class="z-50 w-full flex justify-center bottom-0">
-    <div class="container px-8 py-24 text-2xl leading-10 masonary">
+    <div class="container px-24 py-24 text-2xl leading-10 masonary">
         <div v-if="loadingCats">
             <h6>Loading..</h6>
         </div>
@@ -46,7 +46,7 @@ module.exports = {
             cat = cat.replace(/[^a-z0-9]/gi, '-').toLowerCase().replace(/---/gi, '-');
             page = page.replace(/[^a-z0-9]/gi, '-').toLowerCase().replace(/---/gi, '-');
 
-            var url = cat + '/' + page;
+            var url = 'we-do/' + cat + '/' + page;
 
             return url;
         }

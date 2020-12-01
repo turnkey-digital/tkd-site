@@ -4,34 +4,35 @@
 
     <home-hero v-bind="hero" />
 
-    <bio />
+    <home-bio />
 
-    <projects />
+    <home-projects />
 
     <services />
 
-    <footer-home v-bind="footer"/>
+    <home-footer v-bind="footer"/>
 
 </div>
 </template>
 
 <script>
 import HomeHero from "~/components/home/HomeHero.vue";
-import Bio from "~/components/home/Bio.vue";
-import Projects from "~/components/home/Projects.vue";
-import FooterHome from "~/components/home/FooterHome.vue";
+import HomeBio from "~/components/home/HomeBio.vue";
+import HomeProjects from "~/components/home/HomeProjects.vue";
+import HomeFooter from "~/components/home/HomeFooter.vue";
 
 import SiteHeader from "~/components/SiteHeader.vue";
 import Services from "~/components/Services.vue";
 
 export default {
     components: {
-        SiteHeader,
         HomeHero,
-        Bio,
-        Projects,
+        HomeBio,
+        HomeProjects,
+        HomeFooter,
+
+        SiteHeader,
         Services,
-        FooterHome,
     },
 
     mounted() {
