@@ -13,11 +13,12 @@
                 <li class="text-gray font-helN font-black hover:text-pri">
                     <NuxtLink to="/">Home</NuxtLink>
                 </li>
-                <li v-for="item in $route.fullPath.split('/')" 
+                <li v-for="(item, index) in fullSlug" 
                     class="text-gray font-helN font-black capitalize pr-6 relative breadCrumb"
                 >
-                    {{item.replace('-', ' ')}}
+                    <NuxtLink :to="'../'+item">{{ index }}, {{ item }} | {{getURL(index)}}</NuxtLink>
                 </li>
+                
             </ul>
         </div>
     </div>
@@ -26,6 +27,16 @@
 
 <script>
 module.exports = {
+    data: function() {
+        return {
+            fullSlug: this.$route.fullPath.split('/'),
+        }
+    },
+    methods:  {
+        getURL: function() {
+            console.log("Whitey's on the moon " + index);
+        }
+    }
     // mounted() {
     //     console.log(this.$route.fullPath);
 

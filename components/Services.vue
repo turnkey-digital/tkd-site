@@ -5,7 +5,9 @@
             <h6>Loading..</h6>
         </div>
         <div v-else v-for="serviceCategory in serviceCategories"  class="mb-16 serviceCategory">
-            <h2 class="text-6xl font-black font-helN">{{serviceCategory.title}}</h2>
+            <NuxtLink v-bind:to="fixURLCat(serviceCategory.title)">
+                <h2 class="text-6xl font-black font-helN hover:text-pri">{{serviceCategory.title}}</h2>
+            </NuxtLink>
             
             <span v-if="loadingServices">Loading...</span>
             
@@ -47,6 +49,13 @@ module.exports = {
             page = page.replace(/[^a-z0-9]/gi, '-').toLowerCase().replace(/---/gi, '-');
 
             var url = 'we-do/' + cat + '/' + page;
+
+            return url;
+        },
+        fixURLCat: function(cat) {
+            cat = cat.replace(/[^a-z0-9]/gi, '-').toLowerCase().replace(/---/gi, '-');
+
+            var url = 'we-do/' + cat;
 
             return url;
         }

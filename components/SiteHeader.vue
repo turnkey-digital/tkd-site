@@ -59,7 +59,7 @@ module.exports = {
                 // console.log(result.navigation);
                 this.siteHeader.logo = process.env.cockpit + result.logo.path;
                 this.siteHeader.navigation = result.navigation;
-                this.loading = false;
+                this.loading = false; 
             })
     },
 
