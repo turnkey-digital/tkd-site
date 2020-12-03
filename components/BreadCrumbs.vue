@@ -10,13 +10,17 @@
         <!-- Live State --> 
         <div v-else class="w-full flex justify-between content-end">
             <ul class="flex">
-                <li class="text-gray font-helN font-black hover:text-pri">
-                    <NuxtLink to="/">Home</NuxtLink>
-                </li>
                 <li v-for="(item, index) in fullSlug" 
-                    class="text-gray font-helN font-black capitalize pr-6 relative breadCrumb"
+                    class="breadCrumb text-gray font-helN font-black capitalize pr-6 relative"
                 >
-                    <NuxtLink :to="'../'+item">{{ index }}, {{ item }} | {{getURL(index)}}</NuxtLink>
+                    <NuxtLink :to="getURL(index)" class="hover:text-white">
+                        <template v-if="index == 0">
+                            Home
+                        </template>
+                        <template v-else>
+                            {{item.replace(/-/gi, ' ')}}
+                        </template>
+                    </NuxtLink>
                 </li>
                 
             </ul>
@@ -33,8 +37,28 @@ module.exports = {
         }
     },
     methods:  {
-        getURL: function() {
-            console.log("Whitey's on the moon " + index);
+        getURL: function(index) {
+
+            switch (index) {
+                case 0:  
+                    var url = "/";
+                    break;
+                case this.fullSlug.length - 1: 
+                    var url = this.fullSlug.join('/');
+                    break;
+                default :
+                    var url = [] 
+                    for (i = 0; i <= index; i++) {
+                        url.push(this.fullSlug[i]);
+                    }
+                    console.log(url);
+                    var url = url.join('/');
+                    break;
+            }
+
+            console.log(this.fullSlug.join('/'));
+
+            return url;
         }
     }
     // mounted() {
